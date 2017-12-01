@@ -44,20 +44,14 @@
     }
   }
 
-  .website, .user-icon {
+  .user-icon {
     width: $w-12;
     height: $w-12;
     display: inline-block;
     margin-right: $mr5;
-  }
-
-  .user-icon {
     background: url(../assets/img/userManagement.png) center;
   }
 
-  .website {
-    background: url(../assets/img/website.png) no-repeat center;
-  }
 </style>
 <template>
   <!--头部组件-->
@@ -67,7 +61,6 @@
         <img class="header-logo " src="../assets/img/logo.png" alt="logo">
       </router-link>
       <div class="btns">
-        <el-button type="primary" @click="userManager"><i class="website"></i>官网</el-button>
         <el-button type="primary" @click="userManager"><i class="user-icon "></i>用户管理</el-button>
         <el-button type="primary" @click="showTrainCampDialog"><i class="el-icon-plus"></i>添加训练营</el-button>
         <el-dropdown split-button type="primary" trigger="click" class="ml10 mr10">
