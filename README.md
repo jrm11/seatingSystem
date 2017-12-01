@@ -18,7 +18,8 @@ vue2 + element-ui + axios + vue-router + webpack + ES6/7+ sass+mockjs
 ```
 浏览器访问 http://localhost:8080
 
-项目结构
+## 目录结构
+
 ```shell
 ├── README.md                                   项目介绍
 ├── index.html                                  入口页面
