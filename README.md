@@ -6,12 +6,19 @@ vue2 + element-ui + axios + vue-router + webpack + ES6/7+ sass+mockjs
 
 
 #### 注意：由于涉及大量的 ES6 等新属性，node 需要 6.0 以上版本
+## 开发
+```bash
 
-npm install
+    # 安装依赖
+    npm install
 
-npm start
+    # 本地开发 开启服务
+    npm start
 
-##项目结构
+```
+浏览器访问 http://localhost:8080
+
+项目结构
 ```shell
 ├── README.md                                   项目介绍
 ├── index.html                                  入口页面
