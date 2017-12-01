@@ -1,7 +1,7 @@
 本项目为小型应用
 ## 技术栈
 
-vue2 + axios + vue-router + webpack + ES6/7+ sass+mockjs
+vue2 + element-ui + axios + vue-router + webpack + ES6/7+ sass+mockjs
 ## 项目运行
 
 
