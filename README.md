@@ -43,7 +43,7 @@ npm start
 │   │       └── common_size.scss          公用尺寸css文件
 │   │       └── reset.scss                       游览器重置css文件
 │   │       └── userManager.scss          用户管理css文件
- |    |    └── img                                   图片
+|   |    └── img                                   图片
 │   ├── common                                公用js工具文件
 │   │   └── bus.js                                公用中间件（用于兄弟组件的通讯）
 │   │   └── util.js                                 公用工具文件
