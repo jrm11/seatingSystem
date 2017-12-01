@@ -10,6 +10,8 @@ vue2 + axios + vue-router + webpack + ES6/7+ sass+mockjs
 npm install
 
 npm start
+项目结构
+```shell
 ├── README.md                               项目介绍
 ├── index.html                                  入口页面
 ├── build                                          构建脚本目录
@@ -70,3 +72,4 @@ npm start
 │   ├── main.js                                  入口js文件
 ├── static                                          纯静态资源，不会被wabpack构建。存放类库文件
 
+```
