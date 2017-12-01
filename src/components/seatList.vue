@@ -1,9 +1,16 @@
 <style lang="scss" scoped rel="stylesheet/scss">
   @import "../assets/css/app";
+  /*座位表点击样式*/
   .active {
     outline: 2px solid #474cff;
   }
 
+  .noSeatBg{
+    background: #fff;
+  }
+  .seatBg{
+    background: #00cccc!important;
+  }
   /*座位列表*/
   .seat-list {
     width: 700px;
@@ -72,8 +79,8 @@
       <li v-for="(item,index) in studentInfoList">
         <div @click="addStyle(item.sId,item.name,index)" :class="{'active':isActive==index}">
           <!--判断如果是空位背景色为白色-->
-          <div class="seat" :style="{background:bg}" v-if="item.name==' '"></div>
-          <div class="seat" :style="{background:'#00cccc'}" v-else>已订座</div>
+          <div class="seat" :class="{noSeatBg:noSeatBg}" v-if="item.name==' '"></div>
+          <div class="seat" :class="{seatBg:seatBg}" v-else>已订座</div>
         </div>
         <p class="student-name">{{item.name}}</p>
       </li>
@@ -88,9 +95,12 @@
     data () {
       return {
         studentInfoList: [],
-        bg: "",
+        noSeatBg: true,
+        seatBg : true,
         flag: true,
-        isActive: 0,
+        isActive: null,
+        //取消订座的状态信息
+        cancelStatus:''
       }
     },
     methods: {

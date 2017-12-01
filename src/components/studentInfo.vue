@@ -240,6 +240,7 @@
               type: 'success'
             });
           });
+        Bus.$emit("cancelSeat",'success');
         }).catch(() => {
         });
       },
