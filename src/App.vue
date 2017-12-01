@@ -10,11 +10,7 @@
   export default {
     data(){
       return{
-        screenHeight:document.body.clientHeight||document.documentElement.clientHeight
       }
-    },
-    mounted(){
-      document.body.style.height = this.screenHeight+'px';
     }
   }
 </script>
@@ -23,9 +19,6 @@
   body {
     margin: 0;
   }
-html,body{
-  height: 100%;
-}
   #app {
     height: 100%;
     background: #3b2f57;
