@@ -34,6 +34,7 @@ export default {
         let hasUser = LoginUsers.some(u => {
           if (u.username === username && u.password === password) {
             user = JSON.parse(JSON.stringify(u));
+            console.log(user);
             user.password = undefined;
             return true;
           }
@@ -86,10 +87,12 @@ export default {
       _Users = _Users.filter(u => !ids.includes(u.id));
       console.log(_Users);
       return new Promise((resolve, reject) => {
-        resolve([200, {
-          code: 200,
-          msg: '删除成功'
-        }]);
+        setTimeout(() => {
+          resolve([200, {
+            code: 200,
+            msg: '删除成功'
+          }]);
+        }, 500);
       });
     });
 

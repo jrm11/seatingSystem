@@ -30,9 +30,9 @@ for (var i = 0; i < 8; i++) {
 
 // 用户
 const Users = [];
-for (let i = 0; i < 30000; i++) {
+for (let i = 0; i < 100; i++) {
   Users.push(Mock.mock({
-    id: Mock.mock('@increment'),
+    id: Mock.Random.guid(),
     name: Mock.Random.cname(),
     sex: Mock.Random.integer(0, 1),
     'professional|1': ['工商管理', '会计', '外语', '软件工程', '计算机', '艺术', '机械', '文学', '物理'],

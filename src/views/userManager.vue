@@ -311,7 +311,7 @@
           this.total = res.data.total;
           //当前页的用户
           this.users = res.data.users;
-          //所有用户
+          //用于导出所有用户
           this.userList = res.data.userList;
           this.listLoading = false;
         });
@@ -408,11 +408,13 @@
       batchRemove () {
         //ids 选中的列表的id
         var ids = this.sels.map(item => item.id).toString();
+
         this.$confirm('确认删除选中记录吗？', '提示', {
           type: 'warning'
         }).then(() => {
           this.listLoading = true;
           let para = {ids: ids};
+        alert(para);
           //发送请求
           batchRemoveUser(para).then((res) => {
             this.listLoading = false;
