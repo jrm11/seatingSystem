@@ -1,0 +1,92 @@
+@charset "UTF-8";
+body,dd, dl, hr, li, ol, ul, h1, h2, h3, h4, h5, h6 p, td, th, p {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #3b2f57;
+  font: 14px/1.5 "微软雅黑", arial, "宋体";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a:focus {
+  -moz-outline-style: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: none;
+  outline-width: 0;
+}
+
+button,
+html input[type=button],
+input[type=submit] {
+  cursor: pointer
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/**
+ * 重置按钮禁用时光标样式
+ */
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+label {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}

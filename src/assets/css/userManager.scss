@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "common_color";
+@import "common_size";
+
+/*搜索条*/
+.search-bar {
+  position: relative;
+  background: $bgf;
+  border: $w-1 solid $border-d;
+  border-bottom: 0;
+}
+
+.el-form-item {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+/*修改分页样式 element-ui*/
+.page {
+  padding: 15px 0;
+  background: $bgf;
+  border-left: $w-1 solid $border-d;
+  border-right: $w-1 solid $border-d;
+  border-bottom: $w-1 solid $border-d;
+  margin-bottom: 20px;
+}
+
+.el-table {
+  border: $w-1 solid $border-d;
+  border-bottom: none;
+}
+
+.el-pager li {
+  /*padding: 5px 10px;*/
+  margin: 0 5px;
+  padding: 0 6px;
+  border-radius: 5px;
+  border: $w-1 solid $border-d;
+  cursor: pointer;
+}
+
+.el-pager li.active + li {
+  border-left: $w-1 solid $border-d;
+}
+
+/*上下页的样式*/
+.el-pagination .btn-next, .el-pagination .btn-prev {
+  border: $w-1 solid $border-d;
+  border-radius: 5px;
+  padding: 0;
+}
+
+/*页码点击后的样式*/
+.el-pager li.active {
+  color: $bgf;
+  background: #409EFF !important;
+  border: 0;
+  padding: 0;
+}
+
+.el-table thead {
+  background: #e0e0e0 !important;
+}
+
+/*弹出框主体内容*/
+.el-dialog__body {
+  padding: 20px 40px;
+}

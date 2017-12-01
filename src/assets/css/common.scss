@@ -1,0 +1,52 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+//修改密码、创建训练营使用的样式
+.w {
+  margin:0 auto;
+  width: 400px;
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+//覆盖element-ui 按钮样式
+.el-button {
+  transition: .3s;
+}
+
+.el-button--primary {
+  vertical-align: middle;
+}
+
+//覆盖element-ui input样式
+.el-input__inner:focus {
+  border-color: #409EFF;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+/*.el-dialog__header {*/
+/*background: #409EFF;*/
+/*color: #fff;*/
+/*}*/
+
+/*.el-dialog__title, .el-icon-close:before {*/
+/*color: #fff;*/
+/*}*/
+
+.el-form-item {
+  padding: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  //z-index: -1;
+}
