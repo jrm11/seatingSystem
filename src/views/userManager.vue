@@ -16,7 +16,7 @@
 </style>
 
 <template>
-  <section class="userManager-c" id="js-userManager">
+  <section class="userManager-c" id="js-userManager" :style="{ 'height': mainHeight + 'px'}">
     <head-top></head-top>
     <!--工具条-->
     <el-col :span="24" class="toolbar search-bar" style="padding-bottom: 0px;">
@@ -193,7 +193,7 @@
   export default {
     data() {
       return {
-        tableHeight:"",
+        tableHeight: "",
         mainHeight: document.body.clientHeight || document.documentElement.clientHeight,
         addUser: false,
         editUser: false,
@@ -252,7 +252,6 @@
       headTop,
     },
     methods: {
-
       //导出zip
       exportZip(){
         require.ensure([], () => {
@@ -418,7 +417,6 @@
         }).then(() => {
           this.listLoading = true;
           let para = {ids: ids};
-        alert(para);
           //发送请求
           batchRemoveUser(para).then((res) => {
             this.listLoading = false;
@@ -426,7 +424,7 @@
               message: '删除成功',
               type: 'success'
             });
-             //删除后重新获取用户列表
+            //删除后重新获取用户列表
             this.getUsers();
           });
         }).catch(() => {
@@ -437,7 +435,7 @@
     mounted() {
       this.getUsers();
       this.isLoading = true;
-      this.tableHeight = this.mainHeight -232
+      this.tableHeight = this.mainHeight - 232
     }
   }
 </script>

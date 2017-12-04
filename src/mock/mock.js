@@ -34,7 +34,6 @@ export default {
         let hasUser = LoginUsers.some(u => {
           if (u.username === username && u.password === password) {
             user = JSON.parse(JSON.stringify(u));
-            console.log(user);
             user.password = undefined;
             return true;
           }
@@ -85,7 +84,6 @@ export default {
       ids = ids.split(',');
       // 判断一个数组是否包含一个指定的值
       _Users = _Users.filter(u => !ids.includes(u.id));
-      console.log(_Users);
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve([200, {
@@ -252,7 +250,6 @@ export default {
     //修改座位信息
     mock.onGet('/modifyStudentInfo/modifyInfo').reply(config=> {
       "use strict";
-      console.log(config.params);
       let {sId, name, teacherName, education, professional, isPrimary, sourceMsg, situation, time, stage}  = config.params;
       time = (!time || time == '') ? '' : util.formatDate.format(new Date(time), 'yyyy-MM-dd');
       _StudentInfo.some(list=> {
