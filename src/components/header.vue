@@ -3,20 +3,16 @@
   @import "../assets/css/common_size";
 
   .header {
-    height: $h100;
-    line-height: $h100;
+    height: $h58;
+    line-height: $h58;
     margin-bottom: 30px;
-  }
-
-  .header .header-logo {
-    margin-top: 21px;
   }
 
   .el-header {
     position: relative;
     padding: 0;
-    line-height: $h100 !important;
-    height: $h100 !important;
+    line-height: $h58 !important;
+    height: $h58 !important;
   }
 
   .btns {
@@ -37,7 +33,7 @@
 
   /*下拉菜单*/
   .el-dropdown-menu {
-    margin-top: -20px;
+    margin-top: 0;
 
     li {
       padding: 0 10px;

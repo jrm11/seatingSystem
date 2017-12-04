@@ -4,6 +4,7 @@
 
   .userManager-c {
     margin: 0 100px;
+    height: 100%;
   }
 
   .btn-list {
@@ -15,7 +16,7 @@
 </style>
 
 <template>
-  <section class="userManager-c">
+  <section class="userManager-c" id="js-userManager">
     <head-top></head-top>
     <!--工具条-->
     <el-col :span="24" class="toolbar search-bar" style="padding-bottom: 0px;">
@@ -46,6 +47,7 @@
               v-loading="listLoading"
               @selection-change="selsChange"
               style="width: 100%;"
+              :height="tableHeight"
               size="mini">
       <el-table-column type="selection">
       </el-table-column>
@@ -70,12 +72,12 @@
       <el-table-column label="操作" width="120">
         <template slot-scope="scope">
           <el-button-group>
-            <el-tooltip class="item" effect="dark" content="编辑" placement="left">
+            <el-tooltip class="item" effect="dark" content="编辑" placement="top">
               <el-button type="primary" class="btn-action" size="small" @click="handleEdit(scope.$index, scope.row)">
                 <i class="el-icon-edit"></i>
               </el-button>
             </el-tooltip>
-            <el-tooltip class="item" effect="dark" content="删除" placement="right">
+            <el-tooltip class="item" effect="dark" content="删除" placement="top">
               <el-button type="danger" class="btn-action" size="small" @click="handleDel(scope.$index, scope.row)">
                 <i class="el-icon-delete"></i>
               </el-button>
@@ -191,6 +193,8 @@
   export default {
     data() {
       return {
+        tableHeight:"",
+        mainHeight: document.body.clientHeight || document.documentElement.clientHeight,
         addUser: false,
         editUser: false,
         isLoading: false,
@@ -433,6 +437,7 @@
     mounted() {
       this.getUsers();
       this.isLoading = true;
+      this.tableHeight = this.mainHeight -232
     }
   }
 </script>
